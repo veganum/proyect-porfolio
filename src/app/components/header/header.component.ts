@@ -27,8 +27,6 @@ export class HeaderComponent {
     this.darkThemeEnabled = !this.darkThemeEnabled;
     localStorage.setItem('darkTheme', String(this.darkThemeEnabled));
     document.body.classList.toggle('dark', this.darkThemeEnabled);
-    console.log(this.darkThemeEnabled);
-
   }
 
 }
