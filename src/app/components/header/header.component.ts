@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faMoon, faSun, faUserNinja, faHome, faPerson, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,7 +6,7 @@ import { faMoon, faSun, faUserNinja, faHome, faPerson, faNetworkWired } from '@f
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
 
   //Font awesome
   faMoon = faMoon;
@@ -17,10 +17,13 @@ export class HeaderComponent {
   faNetworkWired = faNetworkWired
 
 
-  darkThemeEnabled: boolean;
+  darkThemeEnabled: boolean = true;
 
   constructor() {
-    this.darkThemeEnabled = localStorage.getItem('darkTheme') === 'true';
+    this.darkThemeEnabled = localStorage.getItem('darkTheme') === 'false';
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
   toggleDarkTheme(): void {
