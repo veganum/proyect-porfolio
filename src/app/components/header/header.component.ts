@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { faMoon, faSun, faUserNinja, faHome, faPerson, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun, faUserNinja, faHome, faPerson, faNetworkWired ,faEye,faEyeSlash} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
 
   //Font awesome
   faMoon = faMoon;
@@ -15,12 +15,16 @@ export class HeaderComponent implements OnInit{
   faHome = faHome
   faPerson = faPerson
   faNetworkWired = faNetworkWired
+  faEye=faEye
+  faEyeSlash=faEyeSlash
 
 
-  darkThemeEnabled: boolean = true;
+  darkThemeEnabled: boolean = false;
+
+  showHeader : boolean = true;
 
   constructor() {
-    this.darkThemeEnabled = localStorage.getItem('darkTheme') === 'false';
+    this.darkThemeEnabled = localStorage.getItem('darkMode') === 'false';
   }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
@@ -28,8 +32,12 @@ export class HeaderComponent implements OnInit{
 
   toggleDarkTheme(): void {
     this.darkThemeEnabled = !this.darkThemeEnabled;
-    localStorage.setItem('darkTheme', String(this.darkThemeEnabled));
+    localStorage.setItem('darkMode', String(this.darkThemeEnabled));
     document.body.classList.toggle('dark', this.darkThemeEnabled);
+  }
+
+  toggleHeader(){
+    this.showHeader = !this.showHeader
   }
 
 }
