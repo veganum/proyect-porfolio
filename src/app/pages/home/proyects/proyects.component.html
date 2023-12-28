@@ -13,12 +13,12 @@
         class="rounded overflow-hidden shadow-lg flex flex-col  flex-none w-6/12 md:w-3/12 mt-20 bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 ">
         <a href="#"></a>
         <div class="relative">
-          <img class="w-full" [src]="item.img" alt="Sunset in the mountains">
+          <img class="w-full hidden  md:flex" [src]="item.img" alt="Sunset in the mountains">
           <div
             class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
           </div>
           <div
-            class="flex flex-row text-xs absolute top-0 right-0 m-2 bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700  text-white  hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out rounded">
+            class="hidden  md:flex flex-row text-xs absolute top-0 right-0 m-2 bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700  text-white  hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out rounded">
             <span *ngFor="let it of item.technology" href="#" class="py-1 px-1">
               <img class="w-8 rounded" [src]="it.imgTec" />
             </span>
