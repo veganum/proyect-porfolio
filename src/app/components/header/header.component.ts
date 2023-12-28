@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
     this.darkThemeEnabled = localStorage.getItem('darkMode') === 'false';
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
 
   toggleDarkTheme(): void {

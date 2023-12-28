@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
+  heroImg = "../../../../assets/img/mi-foto.jpg"
+
 }
