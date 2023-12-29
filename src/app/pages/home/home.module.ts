@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgOptimizedImage } from '@angular/common'
 
 import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
@@ -18,7 +19,8 @@ import { ProyectsComponent } from './proyects/proyects.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgOptimizedImage
   ]
 })
 export class HomeModule { }

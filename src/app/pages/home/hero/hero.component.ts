@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
@@ -7,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
-  heroImg = "../../../../assets/img/mi-foto.jpg"
+  heroImg = "../../../../assets/img/mi-foto-resize.jpg"
 
 }

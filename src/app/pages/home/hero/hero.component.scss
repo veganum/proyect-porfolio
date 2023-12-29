@@ -1,17 +1,18 @@
 img.animated {
-  animation: filter-animation 10s infinite;
+  // animation: filter-animation 10s infinite;
+  filter: sepia(1) saturate(3) blur(1px);
 }
 
-@keyframes filter-animation {
-  0% {
-    filter: sepia(0) saturate(2) blur(1px);
-  }
+// @keyframes filter-animation {
+//   0% {
+//     filter: sepia(0) saturate(2) blur(1px);
+//   }
 
-  50% {
-    filter: sepia(1) saturate(8) blur(1px);
-  }
+//   50% {
+//     filter: sepia(1) saturate(8) blur(1px);
+//   }
 
-  100% {
-    filter: sepia(0) saturate(2) blur(1px);
-  }
-}
+//   100% {
+//     filter: sepia(0) saturate(2) blur(1px);
+//   }
+// }
