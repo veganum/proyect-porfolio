@@ -1,33 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { faMoon, faSun, faUserNinja, faHome, faPerson, faNetworkWired ,faEye,faEyeSlash} from '@fortawesome/free-solid-svg-icons';
+import { Component } from '@angular/core';
+import {
+  faMoon,
+  faSun,
+  faUserNinja,
+  faHome,
+  faPerson,
+  faNetworkWired,
+  faEye,
+  faEyeSlash,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-
+export class HeaderComponent {
   //Font awesome
   faMoon = faMoon;
   faSun = faSun;
-  faUserNinja = faUserNinja
-  faHome = faHome
-  faPerson = faPerson
-  faNetworkWired = faNetworkWired
-  faEye=faEye
-  faEyeSlash=faEyeSlash
-
+  faUserNinja = faUserNinja;
+  faHome = faHome;
+  faPerson = faPerson;
+  faNetworkWired = faNetworkWired;
+  faEye = faEye;
+  faEyeSlash = faEyeSlash;
 
   darkThemeEnabled: boolean = false;
 
-  showHeader : boolean = true;
+  showHeader: boolean = true;
 
   constructor() {
     this.darkThemeEnabled = localStorage.getItem('darkMode') === 'false';
-  }
-  ngOnInit(): void {
-
   }
 
   toggleDarkTheme(): void {
@@ -36,8 +40,7 @@ export class HeaderComponent implements OnInit {
     document.body.classList.toggle('dark', this.darkThemeEnabled);
   }
 
-  toggleHeader(){
-    this.showHeader = !this.showHeader
+  toggleHeader() {
+    this.showHeader = !this.showHeader;
   }
-
 }

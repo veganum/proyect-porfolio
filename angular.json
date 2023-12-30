@@ -55,8 +55,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "optimization": true,
-              "runtimeChunk": "single"
+              "optimization": true
             },
             "development": {
               "buildOptimizer": false,
@@ -105,6 +104,15 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
@@ -113,6 +121,9 @@
     "analytics": "b7976e1b-7eaf-46f5-a1e0-c2bb33bbad3d",
     "cache": {
       "enabled": false
-    }
+    },
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

@@ -4,20 +4,24 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+    loadChildren: () =>
+      import('./pages/home/home.module').then(m => m.HomeModule),
   },
   {
     path: 'admin-panel',
-    loadChildren: () => import('./pages/admin-panel/admin-panel.module').then(m => m.AdminPanelModule)
+    loadChildren: () =>
+      import('./pages/admin-panel/admin-panel.module').then(
+        m => m.AdminPanelModule
+      ),
   },
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'home',
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

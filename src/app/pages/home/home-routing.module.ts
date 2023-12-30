@@ -7,18 +7,18 @@ import { ProyectsComponent } from './proyects/proyects.component';
 
 const routes: Routes = [
   {
-    path:'',
-    children:[
-      {path: 'hero' , component: HeroComponent },
-      {path: 'about' , component: AboutComponent },
-      {path: 'proyects' , component: ProyectsComponent },
-      {path:'**' , redirectTo: 'hero'},
-    ]
-  }
+    path: '',
+    children: [
+      { path: 'hero', component: HeroComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'proyects', component: ProyectsComponent },
+      { path: '**', redirectTo: 'hero' },
+    ],
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes) ],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class HomeRoutingModule { }
+export class HomeRoutingModule {}

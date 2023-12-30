@@ -6,17 +6,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path:'',
-    children:[
-      {path: 'login' , component: LoginComponent },
-      {path: 'dashboard' , component: DashboardComponent },
-      {path:'**' , redirectTo: 'login'},
-    ]
-  }
+    path: '',
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: '**', redirectTo: 'login' },
+    ],
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes) ],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class AdminPanelRoutingModule { }
+export class AdminPanelRoutingModule {}

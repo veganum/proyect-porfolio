@@ -7,16 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
-  declarations: [
-    LoginComponent,
-    DashboardComponent
-  ],
-  imports: [
-    CommonModule,
-    AdminPanelRoutingModule,
-    ReactiveFormsModule,
-  ]
+  declarations: [LoginComponent, DashboardComponent],
+  imports: [CommonModule, AdminPanelRoutingModule, ReactiveFormsModule],
 })
-export class AdminPanelModule { }
+export class AdminPanelModule {}

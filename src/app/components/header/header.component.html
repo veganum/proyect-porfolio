@@ -1,101 +1,142 @@
-<div ngClass="hideBar" *ngIf="showHeader"
-  class="bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 text-white h-screen ">
-  <button class="flex justify-center py-2.5 px-4" (click)="toggleHeader()" aria-label="Despliega Navbar">
+<div
+  ngClass="hideBar"
+  *ngIf="showHeader"
+  class="bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 text-white h-screen">
+  <button
+    class="flex justify-center py-2.5 px-4"
+    (click)="toggleHeader()"
+    aria-label="Despliega Navbar">
     <fa-icon [icon]="faEyeSlash"></fa-icon>
   </button>
-  <div class="h-px bg-white "></div>
+  <div class="h-px bg-white"></div>
   <nav class="">
-    <a routerLink="home/hero" routerLinkActive="active" ariaCurrentWhenActive="page"
-      class=" py-2.5 px-4 rounded transition duration-200 hover:underline  hover:-translate-x-0.5  hover:skew-y-1 flex justify-center " aria-label="Home">
+    <a
+      routerLink="home/hero"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      class="py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center"
+      aria-label="Home">
       <fa-icon [icon]="faHome"></fa-icon>
     </a>
-    <a routerLink="/home/about" routerLinkActive="active" ariaCurrentWhenActive="page"
-      class=" py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center " aria-label="About">
+    <a
+      routerLink="/home/about"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      class="py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center"
+      aria-label="About">
       <fa-icon [icon]="faPerson"></fa-icon>
     </a>
-    <a routerLink="/home/proyects" routerLinkActive="active" ariaCurrentWhenActive="page"
-      class="py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center " aria-label="Proyects">
+    <a
+      routerLink="/home/proyects"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      class="py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center"
+      aria-label="Proyects">
       <fa-icon [icon]="faNetworkWired"></fa-icon>
     </a>
   </nav>
 
-    <button class="py-2.5 px-5 flex justify-center absolute bottom-0" (click)="toggleDarkTheme()" aria-label="Dark Mode">
-      <fa-icon *ngIf="darkThemeEnabled" [icon]="faMoon"></fa-icon>
-      <fa-icon *ngIf="!darkThemeEnabled" [icon]="faSun"></fa-icon>
-    </button>
-
-
+  <button
+    class="py-2.5 px-5 flex justify-center absolute bottom-0"
+    (click)="toggleDarkTheme()"
+    aria-label="Dark Mode">
+    <fa-icon *ngIf="darkThemeEnabled" [icon]="faMoon"></fa-icon>
+    <fa-icon *ngIf="!darkThemeEnabled" [icon]="faSun"></fa-icon>
+  </button>
 </div>
 <div *ngIf="!showHeader" class="relative min-h-screen md:flex">
   <!-- sidebar -->
   <div
-    class="sidebar  bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 text-blue-100 w-35 max-w-35 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
-
+    class="sidebar bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 text-blue-100 w-35 max-w-35 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
     <!-- logo -->
     <a href="#" class="text-white flex items-center space-x-2 px-4">
       <!-- <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
       </svg> -->
-      <button (click)="toggleHeader()" aria-label="Despliega Navbar">  <fa-icon [icon]="faEye"></fa-icon></button>
+      <button (click)="toggleHeader()" aria-label="Despliega Navbar">
+        <fa-icon [icon]="faEye"></fa-icon>
+      </button>
       <span class="text-2xl font-extrabold">Jose Dev</span>
-
     </a>
 
-    <div class=" w-full h-px max-w-6xl mx-auto my-20" style="background-color: white;">
-
-    </div>
+    <div
+      class="w-full h-px max-w-6xl mx-auto my-20"
+      style="background-color: white"></div>
 
     <!-- nav -->
     <nav>
-      <a routerLink="home/hero" routerLinkActive="active" ariaCurrentWhenActive="page"
-        class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline  hover:-translate-x-0.5  hover:skew-y-1" aria-label="Home">
+      <a
+        routerLink="home/hero"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1"
+        aria-label="Home">
         <fa-icon class="mr-2" [icon]="faHome"></fa-icon>
         Inicio
       </a>
-      <a routerLink="/home/about" routerLinkActive="active" ariaCurrentWhenActive="page"
-        class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1" aria-label="About">
+      <a
+        routerLink="/home/about"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1"
+        aria-label="About">
         <fa-icon class="mr-5" [icon]="faPerson"></fa-icon>Sobre mi
       </a>
-      <a routerLink="/home/proyects" routerLinkActive="active" ariaCurrentWhenActive="page"
-        class=" font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1" aria-label="Proyects">
+      <a
+        routerLink="/home/proyects"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1"
+        aria-label="Proyects">
         <fa-icon class="mr-2" [icon]="faNetworkWired"></fa-icon>Proyectos
       </a>
     </nav>
 
-    <div class="w-11/12 max-w-full absolute bottom-0 text-white ">
-      <div class="h-px   mb-4 " style="background-color: white;">
-      </div>
+    <div class="w-11/12 max-w-full absolute bottom-0 text-white">
+      <div class="h-px mb-4" style="background-color: white"></div>
       <div class="grid grid-cols-2 gap-4 my-4">
         <button class="px-2" (click)="toggleDarkTheme()" aria-label="Dark Mode">
           <fa-icon *ngIf="darkThemeEnabled" [icon]="faMoon"></fa-icon>
           <fa-icon *ngIf="!darkThemeEnabled" [icon]="faSun"></fa-icon>
         </button>
-        <button class="px-2 font-bold  hover:text-red-50 focus:bg-sky-700 " routerLink="/admin-panel/login" aria-label="Dashboard">
+        <button
+          class="px-2 font-bold hover:text-red-50 focus:bg-sky-700"
+          routerLink="/admin-panel/login"
+          aria-label="Dashboard">
           <fa-icon [icon]="faUserNinja"></fa-icon>
         </button>
       </div>
-
     </div>
   </div>
-
 </div>
 <!-- Header Mobile -->
-<div class="sm:hidden absolute top-0 z-50 w-screen ">
+<div class="sm:hidden absolute top-0 z-50 w-screen">
   <div
-    class="flex flex-row  justify-between p-4 m-1 rounded bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 text-blue-100">
+    class="flex flex-row justify-between p-4 m-1 rounded bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 text-blue-100">
     <nav>
-      <a routerLink="home/hero" routerLinkActive="active" ariaCurrentWhenActive="page"
-        class="font-bold px-4  rounded w-3" aria-label="Home">
+      <a
+        routerLink="home/hero"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        class="font-bold px-4 rounded w-3"
+        aria-label="Home">
         <fa-icon [icon]="faHome"></fa-icon>
-
       </a>
-      <a routerLink="/home/about" routerLinkActive="active" ariaCurrentWhenActive="page"
-        class="font-bold  px-4 rounded w-3 " aria-label="About">
+      <a
+        routerLink="/home/about"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        class="font-bold px-4 rounded w-3"
+        aria-label="About">
         <fa-icon [icon]="faPerson"></fa-icon>
       </a>
-      <a routerLink="/home/proyects" routerLinkActive="active" ariaCurrentWhenActive="page"
-        class="font-bold  px-4 rounded w-3 " aria-label="Proyects">
+      <a
+        routerLink="/home/proyects"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        class="font-bold px-4 rounded w-3"
+        aria-label="Proyects">
         <fa-icon [icon]="faNetworkWired"></fa-icon>
       </a>
     </nav>
@@ -104,7 +145,10 @@
         <fa-icon *ngIf="darkThemeEnabled" [icon]="faMoon"></fa-icon>
         <fa-icon *ngIf="!darkThemeEnabled" [icon]="faSun"></fa-icon>
       </button>
-      <button class="px-2 font-bold  hover:text-red-50 focus:bg-sky-700 " routerLink="/admin-panel/login" aria-label="Dashboard">
+      <button
+        class="px-2 font-bold hover:text-red-50 focus:bg-sky-700"
+        routerLink="/admin-panel/login"
+        aria-label="Dashboard">
         <fa-icon [icon]="faUserNinja"></fa-icon>
       </button>
     </div>
