@@ -1,10 +1,10 @@
-.active{
-    background-color: orangered;
+.active {
+  background-color: orangered;
 }
 
 //Revisar
 @media only screen and (max-width: 640px) {
   .hideBar {
-    display:none
+    display: none;
   }
 }

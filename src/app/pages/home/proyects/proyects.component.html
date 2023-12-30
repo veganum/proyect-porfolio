@@ -13,7 +13,6 @@
       <div
         *ngFor="let item of data; index as i"
         class="rounded overflow-hidden shadow-lg flex flex-col flex-none w-6/12 md:w-3/12 mt-20 bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700">
-        <a href="#"></a>
         <div class="relative">
           <img
             class="w-full hidden md:flex"
@@ -24,7 +23,7 @@
           <div
             class="hidden md:flex flex-row text-xs absolute top-0 right-0 m-2 bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 text-white hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out rounded">
             <span *ngFor="let it of item.technology" href="#" class="py-1 px-1">
-              <img class="w-8 rounded" [src]="it.imgTec" />
+              <img class="w-8 rounded" [src]="it.imgTec" alt="Foto Proyecto" />
             </span>
           </div>
         </div>

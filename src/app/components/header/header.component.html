@@ -2,7 +2,10 @@
   ngClass="hideBar"
   *ngIf="showHeader"
   class="bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 text-white h-screen">
-  <button class="flex justify-center py-2.5 px-4" (click)="toggleHeader()">
+  <button
+    class="flex justify-center py-2.5 px-4"
+    (click)="toggleHeader()"
+    aria-label="Alternar barra de navegación">
     <fa-icon [icon]="faEyeSlash"></fa-icon>
   </button>
   <div class="h-px bg-white"></div>
