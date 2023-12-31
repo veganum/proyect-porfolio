@@ -30,6 +30,7 @@
           title="Curriculum Vitae"
           href="../../../../assets/doc/CurriculumJose.pdf"
           target="_blank"
+          aria-label="Curriculum"
           rel="noopener noreferrer">
           <img
             width="32"
@@ -41,8 +42,11 @@
           title="Linkedin"
           href="https://www.linkedin.com/in/jose-franco-nieto/"
           target="_blank"
+          aria-label="Linkedin"
           rel="noopener noreferrer">
           <img
+            width="32"
+            height="32"
             src="https://img.icons8.com/fluent/30/000000/linkedin-2.png"
             alt="linkedin" />
         </a>
@@ -50,8 +54,11 @@
           title="Correo"
           href="mailto:veganum@hotmail.com?Subject=Correo%20Jose"
           target="_blank"
+          aria-label="Mail"
           rel="noopener noreferrer">
           <img
+            width="32"
+            height="32"
             src="https://img.icons8.com/fluent/30/000000/mail.png"
             alt="correo" />
         </a>
@@ -59,15 +66,18 @@
           title="Twitter"
           href="https://twitter.com/Veganum"
           target="_blank"
+          aria-label="twitter"
           rel="noopener noreferrer">
           <img
-            src="https://img.icons8.com/fluent/30/000000/twitter.png"
+            width="32"
+            height="32"
+            ngSrc="https://img.icons8.com/fluent/30/000000/twitter.png"
             alt="twitter" />
         </a>
       </div>
     </div>
     <div class="w-full md:w-1/2 justify-center md:justify-end hidden md:flex">
-      <img class="mifoto rounded" [src]="heroImg" alt="Foto Jose" />
+      <img class="mifoto rounded" [src]="heroImg" alt="Foto Jose" fill />
     </div>
   </div>
 </div>

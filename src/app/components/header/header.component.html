@@ -14,6 +14,7 @@
       routerLink="home/hero"
       routerLinkActive="active"
       ariaCurrentWhenActive="page"
+      aria-label="Home"
       class="py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center">
       <fa-icon [icon]="faHome"></fa-icon>
     </a>
@@ -21,6 +22,7 @@
       routerLink="/home/about"
       routerLinkActive="active"
       ariaCurrentWhenActive="page"
+      aria-label="About"
       class="py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center">
       <fa-icon [icon]="faPerson"></fa-icon>
     </a>
@@ -28,6 +30,7 @@
       routerLink="/home/proyects"
       routerLinkActive="active"
       ariaCurrentWhenActive="page"
+      aria-label="Proyects"
       class="py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center">
       <fa-icon [icon]="faNetworkWired"></fa-icon>
     </a>
@@ -35,7 +38,8 @@
 
   <button
     class="py-2.5 px-5 flex justify-center absolute bottom-0"
-    (click)="toggleDarkTheme()">
+    (click)="toggleDarkTheme()"
+    aria-label="Dark Mode">
     <fa-icon *ngIf="darkThemeEnabled" [icon]="faMoon"></fa-icon>
     <fa-icon *ngIf="!darkThemeEnabled" [icon]="faSun"></fa-icon>
   </button>
@@ -50,7 +54,9 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
       </svg> -->
-      <button (click)="toggleHeader()">
+      <button
+        (click)="toggleHeader()"
+        aria-label="Alternar barra de navegación">
         <fa-icon [icon]="faEye"></fa-icon>
       </button>
       <span class="text-2xl font-extrabold">Jose Dev</span>
@@ -66,6 +72,7 @@
         routerLink="home/hero"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
+        aria-label="Home"
         class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1">
         <fa-icon class="mr-2" [icon]="faHome"></fa-icon>
         Inicio
@@ -74,6 +81,7 @@
         routerLink="/home/about"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
+        aria-label="About"
         class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1">
         <fa-icon class="mr-5" [icon]="faPerson"></fa-icon>Sobre mi
       </a>
@@ -81,6 +89,7 @@
         routerLink="/home/proyects"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
+        aria-label="Proyects"
         class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1">
         <fa-icon class="mr-2" [icon]="faNetworkWired"></fa-icon>Proyectos
       </a>
@@ -89,7 +98,7 @@
     <div class="w-11/12 max-w-full absolute bottom-0 text-white">
       <div class="h-px mb-4" style="background-color: white"></div>
       <div class="grid grid-cols-2 gap-4 my-4">
-        <button class="px-2" (click)="toggleDarkTheme()">
+        <button class="px-2" (click)="toggleDarkTheme()" aria-label="Dark Mode">
           <fa-icon *ngIf="darkThemeEnabled" [icon]="faMoon"></fa-icon>
           <fa-icon *ngIf="!darkThemeEnabled" [icon]="faSun"></fa-icon>
         </button>
@@ -111,6 +120,7 @@
         routerLink="home/hero"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
+        aria-label="Home"
         class="font-bold px-4 rounded w-3">
         <fa-icon [icon]="faHome"></fa-icon>
       </a>
@@ -118,6 +128,7 @@
         routerLink="/home/about"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
+        aria-label="About"
         class="font-bold px-4 rounded w-3">
         <fa-icon [icon]="faPerson"></fa-icon>
       </a>
@@ -125,12 +136,13 @@
         routerLink="/home/proyects"
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
+        aria-label="Proyects"
         class="font-bold px-4 rounded w-3">
         <fa-icon [icon]="faNetworkWired"></fa-icon>
       </a>
     </nav>
     <div>
-      <button class="px-2" (click)="toggleDarkTheme()">
+      <button class="px-2" (click)="toggleDarkTheme()" aria-label="Dark Mode">
         <fa-icon *ngIf="darkThemeEnabled" [icon]="faMoon"></fa-icon>
         <fa-icon *ngIf="!darkThemeEnabled" [icon]="faSun"></fa-icon>
       </button>
