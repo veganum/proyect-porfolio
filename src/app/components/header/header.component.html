@@ -1,3 +1,4 @@
+<!-- ? Sin desplegar -->
 <div
   ngClass="hideBar"
   *ngIf="showHeader"
@@ -13,7 +14,6 @@
     <a
       routerLink="home/hero"
       routerLinkActive="active"
-      ariaCurrentWhenActive="page"
       aria-label="Home"
       class="py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center">
       <fa-icon [icon]="faHome"></fa-icon>
@@ -21,7 +21,6 @@
     <a
       routerLink="/home/about"
       routerLinkActive="active"
-      ariaCurrentWhenActive="page"
       aria-label="About"
       class="py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center">
       <fa-icon [icon]="faPerson"></fa-icon>
@@ -29,7 +28,6 @@
     <a
       routerLink="/home/proyects"
       routerLinkActive="active"
-      ariaCurrentWhenActive="page"
       aria-label="Proyects"
       class="py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1 flex justify-center">
       <fa-icon [icon]="faNetworkWired"></fa-icon>
@@ -44,6 +42,7 @@
     <fa-icon *ngIf="!darkThemeEnabled" [icon]="faSun"></fa-icon>
   </button>
 </div>
+<!-- ? Desplegado -->
 <div *ngIf="!showHeader" class="relative min-h-screen md:flex">
   <div
     class="sidebar bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 text-blue-100 w-35 max-w-35 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
@@ -64,7 +63,6 @@
       <a
         routerLink="home/hero"
         routerLinkActive="active"
-        ariaCurrentWhenActive="page"
         aria-label="Home"
         class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1">
         <fa-icon class="mr-2" [icon]="faHome"></fa-icon>
@@ -73,7 +71,6 @@
       <a
         routerLink="/home/about"
         routerLinkActive="active"
-        ariaCurrentWhenActive="page"
         aria-label="About"
         class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1">
         <fa-icon class="mr-5" [icon]="faPerson"></fa-icon>Sobre mi
@@ -81,7 +78,6 @@
       <a
         routerLink="/home/proyects"
         routerLinkActive="active"
-        ariaCurrentWhenActive="page"
         aria-label="Proyects"
         class="font-bold block py-2.5 px-4 rounded transition duration-200 hover:underline hover:-translate-x-0.5 hover:skew-y-1">
         <fa-icon class="mr-2" [icon]="faNetworkWired"></fa-icon>Proyectos
@@ -105,7 +101,7 @@
     </div>
   </div>
 </div>
-<!-- Header Mobile -->
+<!--? Header Mobile -->
 <div class="sm:hidden absolute top-0 z-50 w-screen">
   <div
     class="flex flex-row justify-between p-4 m-1 rounded bg-teal-600 dark:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-slate-700 text-blue-100">
@@ -113,7 +109,6 @@
       <a
         routerLink="home/hero"
         routerLinkActive="active"
-        ariaCurrentWhenActive="page"
         aria-label="Home"
         class="font-bold px-4 rounded w-3">
         <fa-icon [icon]="faHome"></fa-icon>
@@ -121,7 +116,6 @@
       <a
         routerLink="/home/about"
         routerLinkActive="active"
-        ariaCurrentWhenActive="page"
         aria-label="About"
         class="font-bold px-4 rounded w-3">
         <fa-icon [icon]="faPerson"></fa-icon>
@@ -129,7 +123,6 @@
       <a
         routerLink="/home/proyects"
         routerLinkActive="active"
-        ariaCurrentWhenActive="page"
         aria-label="Proyects"
         class="font-bold px-4 rounded w-3">
         <fa-icon [icon]="faNetworkWired"></fa-icon>
