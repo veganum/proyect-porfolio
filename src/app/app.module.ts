@@ -9,7 +9,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
-import { NotFoundComponent } from './pages/utils/not-found/not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -18,7 +17,6 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HomeComponent,
     AdminPanelComponent,
-    NotFoundComponent,
     HeaderComponent,
     FooterComponent,
   ],
