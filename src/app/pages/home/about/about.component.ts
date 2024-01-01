@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent {
-  heroImg = '../../../../assets/img/mi-foto-resize2.jpg';
+  heroImg = '../../../../assets/img/mi-foto2.webp';
 }
