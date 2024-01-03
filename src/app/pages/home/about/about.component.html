@@ -13,57 +13,25 @@
         Desarrollo Web, y más concretamente en desarrollo frontend. Actualmente
         vivo en Madrid, España.
       </h3>
-      <div
-        class="mt-10 flex justify-center md:justify-around space-x-6 border-2 border-dashed border-blue-900 dark:border-white p-2 rounded-md">
-        <a
-          title="Curriculum Vitae"
-          href="../../../../assets/doc/CurriculumJose.pdf"
-          target="_blank"
-          aria-label="Curriculum"
-          rel="noopener noreferrer">
-          <img
-            width="32"
-            height="32"
-            src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/external-curriculum-management-kiranshastry-lineal-kiranshastry-5.png"
-            alt="curriculum" />
-        </a>
-        <a
-          title="Linkedin"
-          href="https://www.linkedin.com/in/jose-franco-nieto/"
-          target="_blank"
-          aria-label="Linkedin"
-          rel="noopener noreferrer">
-          <img
-            width="32"
-            height="32"
-            src="https://img.icons8.com/fluent/30/000000/linkedin-2.png"
-            alt="linkedin" />
-        </a>
-        <a
-          title="Correo"
-          href="mailto:veganum@hotmail.com?Subject=Correo%20Jose"
-          target="_blank"
-          aria-label="Mail"
-          rel="noopener noreferrer">
-          <img
-            width="32"
-            height="32"
-            src="https://img.icons8.com/fluent/30/000000/mail.png"
-            alt="correo" />
-        </a>
-        <a
-          title="Twitter"
-          href="https://twitter.com/Veganum"
-          target="_blank"
-          aria-label="twitter"
-          rel="noopener noreferrer">
-          <img
-            width="32"
-            height="32"
-            ngSrc="https://img.icons8.com/fluent/30/000000/twitter.png"
-            alt="twitter" />
-        </a>
-      </div>
+      <nav class="flex gap-4 mt-8 flex-wrap my-4">
+        <app-social-pill
+          [nameSocial]="'LinkedIn'"
+          [link]="'https://www.linkedin.com/in/jose-franco-nieto/'"
+          [icon]="linkedin">
+        </app-social-pill>
+        <app-social-pill [nameSocial]="'Github'" [link]="" [icon]="github">
+        </app-social-pill>
+        <app-social-pill
+          [nameSocial]="'Curriculum'"
+          [link]="'../../../../assets/doc/CurriculumJose.pdf'"
+          [icon]="curriculum">
+        </app-social-pill>
+        <app-social-pill
+          [nameSocial]="'veganum@hotmail'"
+          [link]="'mailto:veganum@hotmail.com?Subject=Correo%20Jose'"
+          [icon]="mail">
+        </app-social-pill>
+      </nav>
     </div>
     <div class="w-full md:w-1/2 justify-center md:justify-end hidden md:flex">
       <img class="mifoto rounded" [src]="heroImg" alt="Foto Jose" fill />
